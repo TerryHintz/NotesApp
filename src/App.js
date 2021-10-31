@@ -12,22 +12,15 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-// const sampleNotes = [
-//   {
-//     title: "Password",
-//     subNotes: [
-//       "testAdmin Admin123Admin123",
-//       "system Manager1"
-//     ]
-//   },
-//   {
-//     title: "title",
-//     subNotes: [
-//       "sawg",
-//       "system Masdasdasder1",
-//     ]
-//   },
-// ]
+const sampleNotes = [
+  {
+    title: "Title",
+    subNotes: [
+      "Note 1",
+      "Note 2"
+    ]
+  },
+]
 
 class Notes extends Component {
 
@@ -43,7 +36,7 @@ class Notes extends Component {
 
   componentDidMount() {
     const notesStr = localStorage.getItem("notes");
-    const notes = JSON.parse(notesStr)
+    const notes = JSON.parse(notesStr) || sampleNotes;
     this.setState({notes});
   }
 
