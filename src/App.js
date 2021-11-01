@@ -134,7 +134,7 @@ class Notes extends Component {
                         onClick={() => this.handleSubNoteClick(subNote)}
                         onDoubleClick={() => this.handleSubNoteDoubleClick(subNote, index, subIndex)}
                       >
-                        <div>{subNote}</div>
+                        <p style={{whiteSpace: 'break-spaces'}}>{subNote}</p>
                         <Button onClick={() => this.handleDeleteSubNote(index, subIndex)}>Delete</Button>
                       </div>
                     )
